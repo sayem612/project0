@@ -21,7 +21,60 @@ public class ProjectZero {
 			     */
 			
 				Scanner inputSource = new Scanner(System.in);
-				double input1, input2, result;
+				System.out.println("Please enter two numbers of your exalted choosing: ");
+				
+				try{
+					//this while loop takes care of int-int and int-double sum
+					while(inputSource.hasNextInt()){
+						int input1= inputSource.nextInt();
+						if(inputSource.hasNextInt()){
+							int input2= inputSource.nextInt();
+							int sum= input1+input2;
+							System.out.println( "Your sum is:"+ sum);
+						}
+						else if(inputSource.hasNextDouble()){
+						double input2= inputSource.nextDouble();
+						double sum= input1+input2;
+					
+						System.out.println( "Your sum is:"+ sum);
+					}
+						
+						}
+					
+					
+				//this while loop takes care of double-int and double-double sum
+				while(inputSource.hasNextDouble()){
+					double input1= inputSource.nextDouble();
+					 if(inputSource.hasNextInt()){
+						int input2= inputSource.nextInt();
+						double sum= input1+input2;
+						System.out.println( "Your sum is:"+ sum );
+						
+					}
+					else if(inputSource.hasNextDouble()){
+					double input2= inputSource.nextDouble();
+					double sum= input1+input2;
+					System.out.println( "Your sum is:"+ sum);
+				}
+					
+				}
+				
+				}
+				catch (Exception e){
+					System.out.println("Please enter a valid number or input");
+				}
+				
+				int x=2;
+				double p=3.4;
+				double sum1=x+p;
+				System.out.println("Your sum1 is:"+sum1);
+				
+				
+				
+				
+				
+				
+	/*			double input1, input2, result; My version of code
 		try 
 		{
 				System.out.print("Please enter two numbers of your exalted choosing: ");
@@ -47,7 +100,7 @@ public class ProjectZero {
 		//The following lines have Exception case(message)
 		catch(Exception e) {
 			System.out.println("Please enter a valid number or input");
-		}
+		} */
 		inputSource.close();
 	}
 
